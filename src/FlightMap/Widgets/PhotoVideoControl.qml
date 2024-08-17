@@ -342,6 +342,17 @@ Rectangle {
                 font.pointSize:     ScreenTools.largeFontPointSize
                 visible:            _modeIndicatorPhotoMode
             }
+            QGCButton {
+                enabled:   true
+                text:       qsTr("Day/IR")
+                width:      100
+                onClicked: {
+                    if (_videoStreamSettings.udpPort.rawValue === _videoStreamSettings.udpPortEO.rawValue)
+                         _videoStreamSettings.udpPort.rawValue = _videoStreamSettings.udpPortThermal.rawValue
+                    else
+                         _videoStreamSettings.udpPort.rawValue = _videoStreamSettings.udpPortEO.rawValue
+                }
+            }
             QGCLabel {
                 Layout.alignment:   Qt.AlignHCenter
                 text:               _mavlinkCamera ? qsTr("Free Space: ") + _mavlinkCamera.storageFreeStr : ""

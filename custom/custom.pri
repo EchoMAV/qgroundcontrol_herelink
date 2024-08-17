@@ -32,19 +32,19 @@ message(Custom QGC Version: $${CUSTOM_QGC_VERSION})
 DEFINES += CUSTOMHEADER=\"\\\"HerelinkCorePlugin.h\\\"\"
 DEFINES += CUSTOMCLASS=HerelinkCorePlugin
 
-TARGET   = Herelink-QGroundControl
-DEFINES += QGC_APPLICATION_NAME='"\\\"Herelink QGroundControl\\\""'
+TARGET   = EchoMAV-GCS
+DEFINES += QGC_APPLICATION_NAME='"\\\"EchoMAV GCS\\\""'
 
-DEFINES += QGC_ORG_NAME=\"\\\"cubepilot.org\\\"\"
-DEFINES += QGC_ORG_DOMAIN=\"\\\"org.cubepilot\\\"\"
+DEFINES += QGC_ORG_NAME=\"\\\"echomav.com\\\"\"
+DEFINES += QGC_ORG_DOMAIN=\"\\\"org.echomav\\\"\"
 
-QGC_APP_NAME        = "Herelink QGroundControl"
-QGC_BINARY_NAME     = "Herelink-QGroundControl"
-QGC_ORG_NAME        = "Cubepilot"
-QGC_ORG_DOMAIN      = "org.cubepilot"
-QGC_ANDROID_PACKAGE = "org.cubepilot.herelink_qgroundcontrol"
-QGC_APP_DESCRIPTION = "Herelink QGroundControl"
-QGC_APP_COPYRIGHT   = "Copyright (C) 2024 Cubepilot. All rights reserved."
+QGC_APP_NAME        = "EchoMAV GCS"
+QGC_BINARY_NAME     = "EchoMAV-GCS"
+QGC_ORG_NAME        = "EchoMAV"
+QGC_ORG_DOMAIN      = "org.echomav"
+QGC_ANDROID_PACKAGE = "org.echomav.echomavgcs"
+QGC_APP_DESCRIPTION = "EchoMAV GCS"
+QGC_APP_COPYRIGHT   = "Copyright (C) 2024 EchoMAV, LLC. All rights reserved."
 
 # Remove code which the Herelink doesn't need
 DEFINES += \

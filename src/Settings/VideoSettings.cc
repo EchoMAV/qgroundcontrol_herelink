@@ -109,6 +109,7 @@ DECLARE_SETTINGGROUP(Video, "Video")
 
 void VideoSettings::_setDefaults()
 {
+
     if (_noVideo) {
         _nameToMetaDataMap[videoSourceName]->setRawDefaultValue(videoSourceNoVideo);
     } else {
@@ -163,6 +164,26 @@ DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, forceVideoDecoder)
         connect(_forceVideoDecoderFact, &Fact::valueChanged, this, &VideoSettings::_configChanged);
     }
     return _forceVideoDecoderFact;
+}
+
+
+
+DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, udpPortThermal)
+{
+    if (!_udpPortThermalFact) {
+        _udpPortThermalFact = _createSettingsFact(udpPortThermalName);
+        connect(_udpPortThermalFact, &Fact::valueChanged, this, &VideoSettings::_configChanged);
+    }
+    return _udpPortThermalFact;
+}
+
+DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, udpPortEO)
+{
+    if (!_udpPortEOFact) {
+        _udpPortEOFact = _createSettingsFact(udpPortEOName);
+        connect(_udpPortEOFact, &Fact::valueChanged, this, &VideoSettings::_configChanged);
+    }
+    return _udpPortEOFact;
 }
 
 DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, udpPort)

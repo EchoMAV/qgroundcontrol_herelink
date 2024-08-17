@@ -19,6 +19,22 @@
     "default":     5600
 },
 {
+    "name":             "udpPortEO",
+    "shortDesc": "Video EO UDP Port",
+    "longDesc":  "UDP port to bind to for EO video stream.",
+    "type":             "uint16",
+    "min":              1025,
+    "default":     5600
+},
+{
+    "name":             "udpPortThermal",
+    "shortDesc": "Video Thermal UDP Port",
+    "longDesc":  "UDP port to bind to for Thermal video stream.",
+    "type":             "uint16",
+    "min":              1025,
+    "default":     5601
+},
+{
     "name":             "rtspUrl",
     "shortDesc": "Video RTSP Url",
     "longDesc":  "RTSP url address and port to bind to for video stream. Example: rtsp://192.168.42.1:554/live",

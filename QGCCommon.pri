@@ -160,7 +160,7 @@ StableBuild {
     message("Stable Build")
 } else {
     message("Daily Build")
-    DEFINES += DAILY_BUILD
+    # DEFINES += DAILY_BUILD
 }
 
 # Set the QGC version from git

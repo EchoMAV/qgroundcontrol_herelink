@@ -320,14 +320,24 @@ Rectangle {
                                 }
 
                                 QGCLabel {
-                                    id:         udpPortLabel
-                                    text:       qsTr("UDP Port")
-                                    visible:    !_videoAutoStreamConfig && (_isUDP264 || _isUDP265 || _isMPEGTS) && _videoSettings.udpPort.visible
+                                    id:         udpPortEOLabel
+                                    text:       qsTr("UDP Port EO")
+                                    visible:    !_videoAutoStreamConfig && (_isUDP264 || _isUDP265 || _isMPEGTS) && _videoSettings.udpPortEO.visible
                                 }
                                 FactTextField {
                                     Layout.preferredWidth:  _comboFieldWidth
-                                    fact:                   _videoSettings.udpPort
-                                    visible:                udpPortLabel.visible
+                                    fact:                   _videoSettings.udpPortEO
+                                    visible:                udpPortEOLabel.visible
+                                }
+                                QGCLabel {
+                                    id:         udpPortThermalLabel
+                                    text:       qsTr("UDP Port Thermal")
+                                    visible:    !_videoAutoStreamConfig && (_isUDP264 || _isUDP265 || _isMPEGTS) && _videoSettings.udpPortThermal.visible
+                                }
+                                FactTextField {
+                                    Layout.preferredWidth:  _comboFieldWidth
+                                    fact:                   _videoSettings.udpPortThermal
+                                    visible:                udpPortThermalLabel.visible
                                 }
 
                                 QGCLabel {
@@ -1122,6 +1132,7 @@ Rectangle {
                         }
                     }
 
+                    /*
                     Item { width: 1; height: _margins; visible: brandImageSectionLabel.visible }
                     QGCLabel {
                         id:         brandImageSectionLabel
@@ -1197,6 +1208,7 @@ Rectangle {
                             }
                         }
                     }
+                    */
 
                     Item { width: 1; height: _margins }
                     QGCLabel {
