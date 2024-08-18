@@ -378,10 +378,12 @@ Rectangle {
             ColumnLayout {
                 spacing: _margins
 
+
+
                 GridLayout {
                     Layout.margins: ScreenTools.defaultFontPixelWidth
                     columns:        3
-                    visible:        QGroundControl.corePlugin.isHerelink
+                    visible:        false  // QGroundControl.corePlugin.isHerelink  //we are not using herelink video sources
 
                     QGCLabel {
                         text:               qsTr("video source used: HDMI ") + (_videoStreamSettings.cameraId.rawValue + 1)
@@ -401,6 +403,7 @@ Rectangle {
                         onClicked:          _videoStreamSettings.cameraId.rawValue = 1
                     }
                 }
+
                 GridLayout {
                     id:     gridLayout
                     flow:   GridLayout.TopToBottom
