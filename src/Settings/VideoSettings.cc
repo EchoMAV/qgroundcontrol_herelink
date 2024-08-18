@@ -167,25 +167,6 @@ DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, forceVideoDecoder)
 }
 
 
-
-DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, udpPortThermal)
-{
-    if (!_udpPortThermalFact) {
-        _udpPortThermalFact = _createSettingsFact(udpPortThermalName);
-        connect(_udpPortThermalFact, &Fact::valueChanged, this, &VideoSettings::_configChanged);
-    }
-    return _udpPortThermalFact;
-}
-
-DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, udpPortEO)
-{
-    if (!_udpPortEOFact) {
-        _udpPortEOFact = _createSettingsFact(udpPortEOName);
-        connect(_udpPortEOFact, &Fact::valueChanged, this, &VideoSettings::_configChanged);
-    }
-    return _udpPortEOFact;
-}
-
 DECLARE_SETTINGSFACT_NO_FUNC(VideoSettings, udpPort)
 {
     if (!_udpPortFact) {

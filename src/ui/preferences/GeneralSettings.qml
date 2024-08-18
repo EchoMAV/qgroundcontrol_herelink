@@ -320,25 +320,15 @@ Rectangle {
                                 }
 
                                 QGCLabel {
-                                    id:         udpPortEOLabel
-                                    text:       qsTr("UDP Port EO")
-                                    visible:    !_videoAutoStreamConfig && (_isUDP264 || _isUDP265 || _isMPEGTS) && _videoSettings.udpPortEO.visible
+                                    id:         udpPortLabel
+                                    text:       qsTr("UDP Port")
+                                    visible:    !_videoAutoStreamConfig && (_isUDP264 || _isUDP265 || _isMPEGTS) && _videoSettings.udpPort.visible
                                 }
                                 FactTextField {
                                     Layout.preferredWidth:  _comboFieldWidth
-                                    fact:                   _videoSettings.udpPortEO
-                                    visible:                udpPortEOLabel.visible
-                                }
-                                QGCLabel {
-                                    id:         udpPortThermalLabel
-                                    text:       qsTr("UDP Port Thermal")
-                                    visible:    !_videoAutoStreamConfig && (_isUDP264 || _isUDP265 || _isMPEGTS) && _videoSettings.udpPortThermal.visible
-                                }
-                                FactTextField {
-                                    Layout.preferredWidth:  _comboFieldWidth
-                                    fact:                   _videoSettings.udpPortThermal
-                                    visible:                udpPortThermalLabel.visible
-                                }
+                                    fact:                   _videoSettings.udpPort
+                                    visible:                udpPortLabel.visible
+                                }                               
 
                                 QGCLabel {
                                     id:         rtspUrlLabel

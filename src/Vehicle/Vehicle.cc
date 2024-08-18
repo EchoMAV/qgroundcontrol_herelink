@@ -505,9 +505,6 @@ void Vehicle::_commonInit()
 
     _gimbalController = new GimbalController(_mavlink, this);
 
-    //set default video port to EO
-    _settingsManager->videoSettings()->udpPort()->setRawValue(_settingsManager->videoSettings()->udpPortEO()->rawValue());
-
 }
 
 Vehicle::~Vehicle()
