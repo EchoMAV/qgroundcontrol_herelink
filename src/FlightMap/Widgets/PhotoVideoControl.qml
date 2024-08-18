@@ -341,7 +341,18 @@ Rectangle {
                 text:               _activeVehicle ? ('00000' + _activeVehicle.cameraTriggerPoints.count).slice(-5) : "00000"
                 font.pointSize:     ScreenTools.largeFontPointSize
                 visible:            _modeIndicatorPhotoMode
-            }          
+            }
+            QGCButton {
+                enabled:   true
+                text:       qsTr("Day/IR")
+                width:      100
+                onClicked: {
+                    if (_mavlinkCamera.thermalMode === QGCCameraControl.THERMAL_BLEND || _mavlinkCamera.thermalMode === QGCCameraControl.THERMAL_OFF || _mavlinkCamera.thermalMode === QGCCameraControl.THERMAL_PIP)
+                        _mavlinkCamera.thermalMode = QGCCameraControl.THERMAL_FULL
+                    else
+                        _mavlinkCamera.thermalMode = QGCCameraControl.THERMAL_OFF
+                }
+            }
             QGCLabel {
                 Layout.alignment:   Qt.AlignHCenter
                 text:               _mavlinkCamera ? qsTr("Free Space: ") + _mavlinkCamera.storageFreeStr : ""
