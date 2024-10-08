@@ -31,7 +31,7 @@ Rectangle {
 
         QGCLabel {
             anchors.horizontalCenter:   parent.horizontalCenter
-            visible:                    _noGPSLockVisible
+            visible:                    _noGPSLockVisible & false //EchoMAV edit to hide this as we are often using optical flow
             color:                      "black"
             font.pointSize:             ScreenTools.largeFontPointSize
             text:                       qsTr("No GPS Lock for Vehicle")
